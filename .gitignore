@@ -1,0 +1,12 @@
+# Entorno virtual de Python
+venv/
+__pycache__/
+*.pyc
+
+# Archivos de entorno y base de datos local
+.env
+db.sqlite3
+
+# Node modules del frontend
+frontend/node_modules/
+frontend/dist/
