@@ -16,7 +16,7 @@ function PropertyList() {
 
   // Traer las propiedades desde Django
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/properties/')
+    fetch('portal-inmobiliario-fullstack-production.up.railway.app/api/properties/')
       .then(respuesta => respuesta.json())
       .then(datos => setProperties(datos))
       .catch(error => console.error("Error al traer los datos:", error))

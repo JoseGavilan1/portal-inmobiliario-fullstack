@@ -25,13 +25,13 @@ function Dashboard() {
   // Función para ir a buscar TODO a Django
   const cargarDatos = () => {
     // 1. Buscamos los mensajes de contacto
-    fetch('http://127.0.0.1:8000/api/contact/')
+    fetch('portal-inmobiliario-fullstack-production.up.railway.app/api/contact/')
       .then(res => res.json())
       .then(data => setLeads(data))
       .catch(err => console.error(err));
 
     // 2. Buscamos las propiedades
-    fetch('http://127.0.0.1:8000/api/properties/')
+    fetch('portal-inmobiliario-fullstack-production.up.railway.app/api/properties/')
       .then(res => res.json())
       .then(data => setPropiedades(data))
       .catch(err => console.error(err));

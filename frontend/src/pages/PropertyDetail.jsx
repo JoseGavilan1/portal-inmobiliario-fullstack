@@ -16,7 +16,7 @@ function PropertyDetail() {
   const [enviado, setEnviado] = useState(false);
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/api/properties/${id}/`)
+    fetch(`portal-inmobiliario-fullstack-production.up.railway.app/api/properties/${id}/`)
       .then(res => res.json())
       .then(data => setProperty(data))
       .catch(err => console.error(err));
@@ -30,7 +30,7 @@ function PropertyDetail() {
     e.preventDefault();
     const payload = { ...formData, property: id };
 
-    fetch('http://127.0.0.1:8000/api/contact/', {
+    fetch('portal-inmobiliario-fullstack-production.up.railway.app/api/contact/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
