@@ -16,7 +16,7 @@ function PropertyDetail() {
   const [enviado, setEnviado] = useState(false);
 
   useEffect(() => {
-    fetch(`portal-inmobiliario-fullstack-production.up.railway.app/api/properties/${id}/`)
+    fetch(`https://portal-inmobiliario-fullstack-production.up.railway.app/api/properties/${id}/`)
       .then(res => res.json())
       .then(data => setProperty(data))
       .catch(err => console.error(err));
